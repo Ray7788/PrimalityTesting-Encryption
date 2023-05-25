@@ -2,7 +2,7 @@ import math, random
 
 x = int(input("Input a number: \n"))
 
-def isPrime(x):
+def isPrime_Trial_division(x):
     '''
     # https://en.wikipedia.org/wiki/Trial_division
     '''
@@ -20,12 +20,10 @@ def isPrime_Fermat(x):
     2 << x-2  means 2^(x-1)
     # https://stackoverflow.com/questions/29595849/explain-a-code-to-check-primality-based-on-fermats-little-theorem
     '''
+    # return pow(2, x-1, x) == 1
     return (2 << x - 2) % x == 1
 
-def isPrime_Fermat2(x):
-    return pow(2, x-1, x) == 1
-
-def isPrime_witness(x, k=5):
+def isPrime_Witness(x, k=5):
     '''
     # https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/
     '''
@@ -100,4 +98,4 @@ def isComposite_rabin_miller(x, k=5):
 
 
 
-print(isPrime_witness(x))
+print(isPrime_Witness(x))
