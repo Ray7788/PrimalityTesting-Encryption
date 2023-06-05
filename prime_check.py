@@ -1,8 +1,12 @@
 import math, random
 
-x = int(input("Input a number: \n"))
+# x = int(input("Input a number: \n"))
 
 def prime_number_theorem(x):
+    ''' 
+    素数定理、其实 只是约等于小于等于x的素数个数
+
+    '''
     # n bit
     n = int(math.log(2**x))
 
@@ -32,3 +36,4 @@ def isPrime_Fermat(x):
     # return pow(2, x-1, x) == 1
     return (2 << x - 2) % x == 1
 
+print(prime_number_theorem(5))
