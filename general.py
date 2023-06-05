@@ -25,8 +25,9 @@ def isPrime_Trial_division(x):
 def isPrime_Fermat(x):
     '''
     2 << x-2 means 2^(x-1)
+    在这里底数为2，不是随机的
     # https://stackoverflow.com/questions/29595849/explain-a-code-to-check-primality-based-on-fermats-little-theorem
-    561 1105会判断错误，都不是质数
+    561 1105会判断错误，都不是质数，是伪素数 Carmichael Numbers
     '''
     # return pow(2, x-1, x) == 1
     return (2 << x - 2) % x == 1
