@@ -14,7 +14,7 @@ To encrypt a message using El Gamal Encryption. You need to find a random which 
 In order to do this you will need to use a [**FAST MODULAR EXPONENTIATION**](fast_modular.py) algorithm.
 
 ----------------
-中文
+简体中文
 ====
 在密码学中，ElGamal加密算法是一个基于迪菲-赫尔曼密钥交换的非对称加密算法。它在1985年由塔希尔·盖莫尔提出。[1]GnuPG和PGP等很多密码学系统中都应用到了ElGamal算法。
 
@@ -23,7 +23,7 @@ In order to do this you will need to use a [**FAST MODULAR EXPONENTIATION**](fas
 这里是El Gamal加密的单向函数：
 ![image](https://github.com/Ray7788/PrimalityTesting-Encryption/assets/87214670/6bd85df1-d4b1-4afc-86f8-b4a7f3285978)
 
-两个数字的**最大公因数，[(gcd)](gcd.py)，或最高公因数，hcf，是两个数字相除的最大整数，用于 "mod "操作。
+两个数字的最大公因数，[(gcd)](gcd.py)，或最高公因数，hcf，是两个数字相除的最大整数，用于 "mod "操作。
 
 使用El Gamal加密法对信息进行加密。你需要使用一些[基本素数检测，比如素数定理，暴力测试，费马小定理](prim_check.py)方法或[Rabin Miller](Rabin_Miller.py)方法找到一个**互质的随机数**（其中素数出现在公钥中），然后对各种数字进行计算。
-为了做到这一点，你需要使用[**快速模幂解析**](fast_modular.py)算法。
+为了做到这一点，你需要使用[快速模幂解析](fast_modular.py)算法。
