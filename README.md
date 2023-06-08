@@ -6,7 +6,7 @@ The [El Gamal encryption](https://en.wikipedia.org/wiki/ElGamal_encryption) syst
 A one-way function is one that is easy to compute but hard to invert. Formally, a function is one-way if it can be computed in polynomial time but any polynomial time randomised algorithm that attempts to compute a pseudo-inverse for succeeds with negligible probability.
 
 Here is the one-way function for The El Gamal encryption:
-![image](https://github.com/Ray7788/PrimalityTesting-Encryption/assets/87214670/6bd85df1-d4b1-4afc-86f8-b4a7f3285978)
+![image](EL.png)
 
 The **greatest common divisor**, [(gcd)](gcd.py), or highest common factor, hcf, of two numbers is largest integer that divides them both, which is utilized for the "mod" operation.
 
@@ -21,7 +21,7 @@ In order to do this you will need to use a [**FAST MODULAR EXPONENTIATION**](fas
 单向函数是一个容易计算但很难反转的函数。从形式上看，如果一个函数可以在多项式时间内被计算出来，但任何试图计算其伪逆的多项式时间随机算法都会以可忽略的概率成功。
 
 这里是El Gamal加密的单向函数：
-![image](https://github.com/Ray7788/PrimalityTesting-Encryption/assets/87214670/6bd85df1-d4b1-4afc-86f8-b4a7f3285978)
+![image](EL.png)
 
 两个数字的最大公因数，[(gcd)](gcd.py)，或最高公因数，hcf，是两个数字相除的最大整数，用于 "mod "操作。
 
