@@ -25,5 +25,5 @@ In order to do this you will need to use a [**FAST MODULAR EXPONENTIATION**](fas
 
 两个数字的最大公因数，[(gcd)](gcd.py)，或最高公因数，hcf，是两个数字相除的最大整数，用于 "mod "操作。
 
-使用El Gamal加密法对信息进行加密。你需要使用一些[基本素数检测，比如素数定理，暴力测试，费马小定理](prim_check.py)方法或[Rabin Miller](Rabin_Miller.py)方法找到一个**互质的随机数**（其中素数出现在公钥中），然后对各种数字进行计算。
+使用El Gamal加密法对信息进行加密。你需要使用一些[基本素数检测，比如素数定理，暴力测试，费马小定理](prime_check.py)方法或[Rabin Miller](Rabin_Miller.py)方法找到一个**互质的随机数**（其中素数出现在公钥中），然后对各种数字进行计算。
 为了做到这一点，你需要使用[快速模幂解析](fast_modular.py)算法。
