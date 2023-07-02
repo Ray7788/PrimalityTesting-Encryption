@@ -1,16 +1,30 @@
 # 快速模幂算法
 def FastExponentation(a, p, n):
+    ''' 
+    a^p mod n
+
+    a: Base
+    P: Exponent
+    n: Modulus
+    '''
     if p == 0:
         return 1
     if p % 2 == 0:
-        t = FastExponentation(a, p/2, n)
+        t = FastExponentation(a, p // 2, n)
         return (t*t) % n
     else:
-        t = FastExponentation(a, (p-1)/2, n)
+        t = FastExponentation(a, (p-1) // 2, n)
         return a * ((t*t) % n) % n
 
 
 def MODULAR_EXPONENTIATION(a, b, n):
+    ''' 
+    a^b mod n
+
+    a: Base
+    b: Exponent
+    n: Modulus
+    '''
     c = 0
     d = 1
     binary_representation = bin(b)[2:]  # Convert b to binary representation
