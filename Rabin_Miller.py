@@ -1,26 +1,26 @@
-import math, random
+import math
+import random
 
-x = int(input("Input a number: \n"))
 
 def isPrime_Witness(x, k=5):
     '''
     # https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/
     '''
-    if x < 2 or (x != 2 and x%2 == 0):
+    if x < 2 or (x != 2 and x % 2 == 0):
         return False
-    if x ==2 or x==3:
+    if x == 2 or x == 3:
         return True
-    
+
     # 将 x - 1 表示为 (2^t) * d 的形式
     t = 0
     d = x - 1
     while d % 2 == 0:
         t += 1
         d //= 2
-    
+
     for _ in range(k):
         a = random.randint(2, x-2)
-        y = pow(a,d,x)
+        y = pow(a, d, x)
 
         if y == 1 or y == x-1:
             continue
@@ -31,7 +31,7 @@ def isPrime_Witness(x, k=5):
 
         else:
             return False
-        
+
     return True
 
 
@@ -76,5 +76,7 @@ def isComposite_rabin_miller(x, kk=5):
     return False
 
 
-
-print(isComposite_rabin_miller(x))
+if __name__ == "__main__":
+    x = int(input("Input a number: \n"))
+    print("is Composite?",isComposite_rabin_miller(x))
+    print("is prime?",isPrime_Witness(x))
