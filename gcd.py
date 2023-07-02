@@ -1,3 +1,4 @@
+print("Please enter 2 numbers (number1 > number2) to check the greatest common divisor")
 x = int(input("Input a number1: \n"))
 y = int(input("Input a number2: \n"))
 
