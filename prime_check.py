@@ -1,4 +1,6 @@
-import math, random
+import math
+import random
+
 
 # x = int(input("Input a number: \n"))
 
@@ -11,6 +13,7 @@ def prime_number_theorem(x):
     n = int(math.log(2**x))
 
     return int(x / math.log(x))
+
 
 def isPrime_Trial_division(x):
     '''
@@ -26,6 +29,7 @@ def isPrime_Trial_division(x):
 
     return y == 1
 
+
 def isPrime_Fermat(x):
     '''
     2 << x-2 means 2^(x-1)
@@ -36,4 +40,6 @@ def isPrime_Fermat(x):
     # return pow(2, x-1, x) == 1
     return (2 << x - 2) % x == 1
 
-print(prime_number_theorem(5))
+
+if __name__ == "__main__":
+    print(prime_number_theorem(5))
