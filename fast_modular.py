@@ -1,3 +1,5 @@
+from Rabin_Miller import *
+
 # 快速模幂算法
 def FastExponentation(a, p, n):
     ''' 
@@ -7,14 +9,21 @@ def FastExponentation(a, p, n):
     P: Exponent
     n: Modulus
     '''
-    if p == 0:
-        return 1
-    if p % 2 == 0:
-        t = FastExponentation(a, p // 2, n)
-        return (t*t) % n
+    try:
+        return isPrime_Witness(p)
+    except:
+        print("error!")
     else:
-        t = FastExponentation(a, (p-1) // 2, n)
-        return a * ((t*t) % n) % n
+        if not isPrime_Witness(n):
+            return 
+        if p == 0:
+            return 1
+        if p % 2 == 0:
+            t = FastExponentation(a, p // 2, n)
+            return (t*t) % n
+        else:
+            t = FastExponentation(a, (p-1) // 2, n)
+            return a * ((t*t) % n) % n
 
 
 def MODULAR_EXPONENTIATION(a, b, n):
