@@ -1,11 +1,22 @@
-import math
 import random
+
+# This file contains the implementation of the Miller-Rabin primality test.
 
 
 def isPrime_Witness(x, k=5):
-    '''
-    # https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/
-    '''
+    """
+    Perform the Miller-Rabin primality test to determine if a number is prime.
+
+    Parameters:
+    x (int): The number to be tested for primality.
+    k (int, optional): The number of iterations for the test. Default is 5.
+
+    Returns:
+    bool: True if the number is likely prime, False if it is composite.
+
+    References:
+        https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/
+    """
     if x < 2 or (x != 2 and x % 2 == 0):
         return False
     if x == 2 or x == 3:
@@ -37,6 +48,16 @@ def isPrime_Witness(x, k=5):
 
 def isComposite_rabin_miller(x, kk=5):
     """
+    Test if a number is composite using the Rabin-Miller algorithm.
+
+    Parameters:
+    x -- The number to be tested.
+    kk -- The number of testing iterations (optional, default is 5).
+
+    Returns:
+    True if x is composite, False otherwise.
+
+    ----------------------------------------------
     使用Rabin-Miller算法测试一个数是否为合数。
 
     参数：
@@ -78,5 +99,5 @@ def isComposite_rabin_miller(x, kk=5):
 
 if __name__ == "__main__":
     x = int(input("Input a number: \n"))
-    print("is Composite?",isComposite_rabin_miller(x))
-    print("is prime?",isPrime_Witness(x))
+    print(x, " is Composite?", isComposite_rabin_miller(x))
+    print(x, " is Prime?", isPrime_Witness(x))
